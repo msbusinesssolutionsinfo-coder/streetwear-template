@@ -1,16 +1,18 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-sans: "Inter", sans-serif;
-  --font-display: "Oswald", sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@700&display=swap');
 
 @layer base {
   body {
     @apply font-sans bg-[#09090b] text-white;
   }
   h1, h2, h3 {
-    @apply font-display uppercase tracking-tighter;
+    font-family: 'Oswald', sans-serif;
+    @apply uppercase tracking-tighter;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
   }
 }
